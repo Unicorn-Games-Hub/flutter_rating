@@ -1,9 +1,13 @@
 # flutter_rating
 
-A flutter plugin that implements rating system.
+A highly customizable flutter widget that implements rating system.
 
 ## Getting Started
+```C#
+//Only initial rating is must have parameter 
+new StarRating(rating: rating),
+````
+That's all you need. See below and [/example](/example) for stars.
 
-For help getting started with Flutter, view our online [documentation](https://flutter.io/).
 
-For help on editing package code, view the [documentation](https://flutter.io/developing-packages/).
+![Alt Text](https://media.giphy.com/media/3htkXtnsqSa9y8VsGI/giphy.gif)
