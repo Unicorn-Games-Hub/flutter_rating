@@ -1,0 +1,14 @@
+name: flutter_rating
+description: A flutter plugin that implements rating system.
+version: 0.0.1
+author:
+homepage:
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
