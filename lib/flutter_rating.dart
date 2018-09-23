@@ -22,7 +22,8 @@ class StarRating extends StatelessWidget {
 
   Widget buildStar(BuildContext context, int index) {
     Icon icon;
-    double ratingStarSizeRelativeToScreen =  MediaQuery.of(context).size.width/starCount;
+    double ratingStarSizeRelativeToScreen =
+        MediaQuery.of(context).size.width / starCount;
 
     if (index >= rating) {
       icon = new Icon(
@@ -44,9 +45,13 @@ class StarRating extends StatelessWidget {
       );
     }
     return new InkResponse(
+      containedInkWell: false,
       onTap:
           onRatingChanged == null ? null : () => onRatingChanged(index + 1.0),
-      child: icon,
+      child: new Container(
+        height: size * 1.5,
+        child: icon,
+      ),
     );
   }
 
