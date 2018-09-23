@@ -43,6 +43,7 @@ class StarRating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Material(
+      type: MaterialType.transparency,
       child: new Center(
         child: new Row(
         children: new List.generate(starCount, (index) => buildStar(context, index))
