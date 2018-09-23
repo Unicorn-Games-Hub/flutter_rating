@@ -40,7 +40,7 @@ class _TestState extends State<Test> {
               bottom: 50.0,
             ),
             child: new StarRating(
-              size: MediaQuery.of(context).size.width/starCount*0.8,
+              size: 25.0,
               rating: rating,
               color: Colors.orange,
               borderColor: Colors.grey,

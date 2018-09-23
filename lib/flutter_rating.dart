@@ -45,7 +45,8 @@ class StarRating extends StatelessWidget {
       );
     }
     return new InkResponse(
-      containedInkWell: false,
+      highlightColor: Colors.transparent,
+      radius: (size ?? ratingStarSizeRelativeToScreen)/2,
       onTap:
           onRatingChanged == null ? null : () => onRatingChanged(index + 1.0),
       child: new Container(
