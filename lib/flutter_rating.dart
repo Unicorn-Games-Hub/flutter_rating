@@ -49,7 +49,7 @@ class StarRating extends StatelessWidget {
       onTap:
           onRatingChanged == null ? null : () => onRatingChanged(index + 1.0),
       child: new Container(
-        height: size * 1.5,
+        height: (size ?? ratingStarSizeRelativeToScreen) * 1.5,
         child: icon,
       ),
     );
