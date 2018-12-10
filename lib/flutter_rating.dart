@@ -8,6 +8,7 @@ class StarRating extends StatelessWidget {
   final int starCount;
   final double rating;
   final RatingChangeCallback onRatingChanged;
+  final MainAxisAlignment alignment;
   final Color color;
   final Color borderColor;
   final double size;
@@ -18,6 +19,7 @@ class StarRating extends StatelessWidget {
       this.onRatingChanged,
       this.color,
       this.borderColor,
+      this.alignment = MainAxisAlignment.center,
       this.size});
 
   Widget buildStar(BuildContext context, int index) {
@@ -62,7 +64,7 @@ class StarRating extends StatelessWidget {
       type: MaterialType.transparency,
       child: new Center(
         child: new Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: this.alignment,
           children: new List.generate(
             starCount,
             (index) => buildStar(context, index),
