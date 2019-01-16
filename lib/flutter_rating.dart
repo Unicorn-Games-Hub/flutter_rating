@@ -11,14 +11,17 @@ class StarRating extends StatelessWidget {
   final Color color;
   final Color borderColor;
   final double size;
+  final MainAxisAlignment mainAxisAlignment;
 
-  StarRating(
-      {this.starCount = 5,
-      this.rating = .0,
-      this.onRatingChanged,
-      this.color,
-      this.borderColor,
-      this.size});
+  StarRating({
+    this.starCount = 5,
+    this.rating = .0,
+    this.onRatingChanged,
+    this.color,
+    this.borderColor,
+    this.size,
+    this.mainAxisAlignment = MainAxisAlignment.center,
+  });
 
   Widget buildStar(BuildContext context, int index) {
     Icon icon;
@@ -46,7 +49,7 @@ class StarRating extends StatelessWidget {
     }
     return new InkResponse(
       highlightColor: Colors.transparent,
-      radius: (size ?? ratingStarSizeRelativeToScreen)/2,
+      radius: (size ?? ratingStarSizeRelativeToScreen) / 2,
       onTap:
           onRatingChanged == null ? null : () => onRatingChanged(index + 1.0),
       child: new Container(
@@ -62,7 +65,7 @@ class StarRating extends StatelessWidget {
       type: MaterialType.transparency,
       child: new Center(
         child: new Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: mainAxisAlignment,
           children: new List.generate(
             starCount,
             (index) => buildStar(context, index),
