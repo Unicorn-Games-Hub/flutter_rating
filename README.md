@@ -3,9 +3,9 @@
 A highly customizable flutter widget that implements rating system.
 
 ## Getting Started
-```C#
+```Dart
 //Only initial rating is must have parameter 
-new StarRating(rating: rating),
+StarRating(rating: rating),
 ````
 That's all you need. See below and [/example](/example) for stars.
 

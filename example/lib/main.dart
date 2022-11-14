@@ -6,12 +6,13 @@ void main() => runApp(new MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new Test(),
+      home: Test(),
     );
   }
 }
@@ -23,38 +24,37 @@ class Test extends StatefulWidget {
 
 class _TestState extends State<Test> {
   double rating = 3.5;
-  int starCount = 6;
+  int starCount = 5;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text("Star Rating"),
+      appBar: AppBar(
+        title: Text("Star Rating"),
       ),
-      body:
-      new Column(
+      body: Column(
         children: <Widget>[
-          new Padding(
-            padding: new EdgeInsets.only(
+          Padding(
+            padding: EdgeInsets.only(
               top: 50.0,
               bottom: 50.0,
             ),
-            child: new StarRating(
+            child: StarRating(
               size: 25.0,
               rating: rating,
               color: Colors.orange,
               borderColor: Colors.grey,
               starCount: starCount,
               onRatingChanged: (rating) => setState(
-                    () {
-                      this.rating = rating;
-                    },
-                  ),
+                () {
+                  this.rating = rating;
+                },
+              ),
             ),
           ),
-          new Text(
+          Text(
             "Your rating is: $rating",
-            style: new TextStyle(fontSize: 30.0),
+            style: TextStyle(fontSize: 30.0),
           ),
         ],
       ),
