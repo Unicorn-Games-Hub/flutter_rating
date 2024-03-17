@@ -4,6 +4,8 @@ The Flutter Rating widget is a highly customizable and easy-to-use widget for im
 
 ## Getting Started
 
+![Star Rating package in action](https://github.com/goops17/flutter_rating/blob/master/example/assets/full_rating.gif?raw=true)
+
 To get started with the Flutter Rating widget, you only need to specify the initial rating. Here's the simplest way to include a rating widget in your app:
 
 ```dart
@@ -43,6 +45,8 @@ StarRating(
 With allowHalfRating enabled, users can give half-star ratings by tapping or long-pressing on the stars.
 
 ## Customizing the Icons
+
+![Custom Icons in Star Rating](https://github.com/goops17/flutter_rating/blob/master/example/assets/half_rating.gif?raw=true)
 
 You can customize the filled, half-filled, and empty stars by providing your own IconData. Here's how to customize each star icon:
 
